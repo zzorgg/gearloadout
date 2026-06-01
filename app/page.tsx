@@ -2,6 +2,7 @@
 
 import { MagnifyingGlass, Microphone } from "@phosphor-icons/react"
 import { SettingsDrawer } from "@/components/settings-drawer"
+import Image from "next/image"
 
 export default function Page() {
   return (
@@ -9,11 +10,36 @@ export default function Page() {
       <header className="flex items-center justify-between p-4">
         <a
           href="/about"
-          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
           About
         </a>
-        <SettingsDrawer />
+        <div className="flex items-center gap-3">
+          <a
+            href="https://github.com/zzorgg/gearloadout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-opacity hover:opacity-70"
+          >
+            <Image
+              src="/GitHub_Lockup_Black.svg"
+              alt="GitHub"
+              width={88}
+              height={20}
+              className="block dark:hidden"
+              unoptimized
+            />
+            <Image
+              src="/GitHub_Lockup_White.svg"
+              alt="GitHub"
+              width={88}
+              height={20}
+              className="hidden dark:block"
+              unoptimized
+            />
+          </a>
+          <SettingsDrawer />
+        </div>
       </header>
 
       <main className="flex flex-1 flex-col items-center justify-center gap-6 px-4">
