@@ -30,7 +30,7 @@ export function AppSidebar() {
   if (!mounted) return null
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="offcanvas">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
